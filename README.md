@@ -1,8 +1,6 @@
-This is a custom implementation of Massively from HTML5Up.
+This is a website massively have the idea from https://ghosharitra.com/
 
-I use this as my academic website -- https://www.ghosharitra.com/
-
-The original readme for HTMLUp Massively is included below.
+Below is the HTMLUP License.
 
 ***
 
