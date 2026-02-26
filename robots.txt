@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /nav.html
+Disallow: /generic.html
+Disallow: /elements.html
+
+Sitemap: https://www.ghosharitra.com/sitemap.xml

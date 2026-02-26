@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>GaMorNet | Galaxy Morphology Network</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Galaxy Morphology Network (GaMorNet) is a convolutional
+		 neural network to study galaxy morphology. We used GaMorNet to study the morphology and quenching 
+		 in 100,000 SDSS and 20,000 CANDELS galaxies at redshifts z = 0 and z = 1" />
+        <meta name="keywords" content="GaMorNet, Galaxy Morphology Network, galaxy morphology, 
+				galaxy morphology machine learning, galaxy machine learning, galaxy deep learning,
+				galaxy morphology deep learning" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-47Z4SFM7FZ"></script>
+		<script>
+ 		 window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-47Z4SFM7FZ');
+		</script>
+		
+        <!-- ACTIVATING MATHJAX TO WRITE LATEX   -->	
+		<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+       	</script>
+       	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+		
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Aritra | &#x0985;&#x09B0;&#x09BF;&#x09A4;&#x09CD;&#x09B0;&nbsp;</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about_me.html">About Me</a></li>
+							<li><a href="research.html">Research</a></li>
+							<li><a href="teaching.html">Teaching &amp Mentoring</a></li>
+							<li><a href="outreach.html">Outreach</a></li>
+							<li><a href="advocacy.html">Advocacy</a></li>	
+							<li><a href="cv.html">CV</a></li>			
+						</ul>
+						<ul class="icons">
+							<li><a href="mailto:aritraghsh09@gmail.com" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/aritraghsh09" target="_blank"  class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://twitter.com/aritraghsh09" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/aritra-ghosh-169ba582" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+
+								<header class="major">
+									<h1 style="text-transform: none;">GaMorNet</h1>
+
+									<span class="image fit" style="max-width: 80%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/gamornet_schematic.png" alt="Schematic Diagram of the 
+									Galaxy Morphology Network" style="height: 10%;"/></span>
+
+
+									<h3>Galaxy Morphology Network</h3>
+									<p>A CNN for studying galaxy morphology that is trainable with only a dab of real data</p>
+
+									<ul class="actions special wrap">
+										<li><a href="https://arxiv.org/abs/2006.14639v1" class="button primary small" target="_blank">ArXiv</i></a></li>
+										<li><a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab8a47/meta" class="button primary small" target="_blank">ApJ</a></li>
+										<li><a href="https://github.com/aritraghsh09/GaMorNet" class="button primary small" target="_blank">Source Code</a></li> 
+										<li><a href="https://gamornet.readthedocs.io/en/latest/" class="button primary small" target="_blank">Docs. & Tutorials</a></li> 
+										<li><a href="https://gamornet.readthedocs.io/en/latest/usage_guide.html" class="button primary small" target="_blank">Data Release</a></li> 
+										<li><a href="https://pypi.org/project/gamornet/" class="button primary small" target="_blank">PyPI package</a></li> 
+									</ul>
+							
+								</header>
+
+								<hr />
+
+								<h3>Short Summary of What we did</h3>
+								<p>To classify galaxies morphologically, we developed Galaxy Morphology Network,a convolutional neural 
+								   network that classifies galaxies according to their bulge-to-total ratio. GaMorNet does not need a
+								   large training set of real data and can be applied to datasets with a range of signal-to-noise ratios
+								   and spatial resolutions. We first trained GaMorNet on simulations of galaxies with a bulge and a disk 
+								   component and then used a technique called transfer learning to refine the already trained network  using
+								    $\sim25\%$ of the real dataset to achieve net misclassification rates of $\lesssim5\%$. This has very 
+									important consequences, as the applicability of CNNs to future data-intensive surveys like LSST, 
+									<i>WFIRST</i>, and <i>Euclid</i> will depend on their ability to perform on multiple data-sets 
+									without the need for a large training set of real data.
+								</p>
+
+								<p>Using the GaMorNet classifications, we study the quenching of star formation in $\sim 100,000$ 
+									($z\sim0$) SDSS and $\sim 20,000$ ($z\sim1$) CANDELS galaxies. We find that bulge- and disk-dominated 
+									galaxies have completely different color-mass diagrams, in agreement with previous studies. For both 
+									SDSS and CANDELS galaxies, disk-dominated galaxies peak in the blue cloud, across a broad range of masses,
+									 consistent with slow exhaustion of star-forming gas with no rapid quenching. A small population of red 
+									 disks is found at high mass ($\sim14\%$ of disks at $z\sim0$ and $2\%$ of disks at $z \sim 1$). 
+									 In contrast, bulge-dominated galaxies are mostly red, with much smaller numbers down towards the
+									  blue cloud, suggesting rapid quenching and fast evolution across the green valley. 
+								</p>
+									
+
+								<span class="image fit" style="max-width: 80%;
+									  display: block;
+									   margin-left: auto;
+										margin-right: auto;">
+									  <img src="images/gamornet/combined_cmd.png" alt="Image of Color Mass Diagrams
+									  for SDSS & CANDELS galaxies" style="height: 10%;"/>
+								</span>
+
+								<hr />
+
+								<h3>The Network </h3>
+
+								<p>The image at the top of this page shows a schematic representation of GaMorNet. 
+									The architecture of GaMorNet is based on AlexNet, a CNN which won the 2012 ImageNet
+									Large Scale Visual Recognition Challenge(ILVRS). Very broadly speaking, the architecture
+									of GaMorNet consists of 5 convolutional layers and 3 fully connected layers. Interspersed
+									between these are local response normalization, max-pooling and dropout layers. 
+									Refer to Sec.3.2 in the paper to learn more about the architecture of GaMorNet
+								</p>
+								
+
+								<p>We implement GaMorNet using <a href='https://keras.io' target='_blank'>Keras</a> and
+								 <a href='http://tflearn.org/' target='_blank'>TFLearn </a>, both of which are
+								  high-level APIs of <a href="https://www.tensorflow.org/" target='_blank'>TensorFlow</a>.
+								  The Source Code of GaMorNet is made available as a public GitHub repository linked below.
+								</p>
+								
+								<ul class="actions">
+									<li><a href="https://github.com/aritraghsh09/GaMorNet" class="button primary" target="_blank"> GaMorNet Source Code <i class="icon brands fa-github"></i></a></li> 	
+								</ul>
+
+								<hr />
+
+								<h3>Training The Network </h3>
+
+								<p>We first train GaMorNet on simulations of galaxies, each with a bulge and disk component.
+								  We simulate these galaxies using
+								  <a href="http://users.obs.carnegiescience.edu/peng/work/galfit/galfit.html" 
+								  target='_blank'>Galfit</a>. Since we simulated hundreds of thousands of galaxies 
+								  for our work and since the simulations are independent of each other, we could easily
+								  simulate the galaxies in parallel and the code we used to simulate the galaxies is
+								  available as the <a href='https://github.com/aritraghsh09/GalaxySim' 
+								  target='_blank'>GalaxySim</a> GitHub repository.
+								</p>
+
+								<p>Then we take the network trained on simulations and refine the layers towards the 
+									end of the network using a technique called transfer learning using $\sim 25\%$ of
+									the real dataset. Upon testing the network on the remainder of the real data and
+									comparing our results to previous classifications, we find that GaMorNet achieves
+									a net misclassification rate of $\lesssim 5\%$. We make our trained models available
+									for the public. For more information about how to use these models, please refer 
+									to the Data Release Handbook and the Tutorials in the documentation. Tables 5 and 
+									7 from the paper, summarizing the performance of GaMorNet, are shown below.
+								</p>
+
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-6"><span class="image fit"><img src="images/gamornet/sdss_summary_table.png"
+									  		alt="SDSS Summary Table" /></span>
+										</div>
+										<div class="col-6"><span class="image fit"><img src="images/gamornet/candels_summary_table.png"
+									 		alt="CANDELS Summary Table" /></span>
+										</div>
+									</div>
+								</div>
+
+								<ul class="actions">
+									<li><a href="https://gamornet.readthedocs.io/en/latest/usage_guide.html#trained-models" target="_blank" class="button primary">Data Release Handbook</a></li>
+									<li><a href="https://gamornet.readthedocs.io/en/latest/tutorials.html" target="_blank" class="button primary">Tutorials</a></li>
+								</ul>
+
+								<hr />
+								
+								<h3> Prediction Tables</h3>
+
+								<p>We take the final trained network and apply it on 82,547 SDSS g-band galaxies at 
+								   $z\sim0$ and 21,746 CANDELS H-band galaxies at $z\sim1$. For each galaxy, the
+								   network produces a probability for it to be bulge-dominated, disk-dominated or neither. 
+								   The list of all the galaxies along with these probabilities and their final assigned 
+								   classifications are made public through the link below. For more details on what we 
+								   define to be 'bulge-dominated','disk-dominated' and what probability thresholds you 
+								   should use to classify the galaxies, please refer to Sec. 4.1 of the paper. Tables 4 
+								   and 6 from the paper, showing the format of the prediction tables, are reproduced 
+								   below.
+								</p>
+
+								<span class="image fit" style="max-width: 75%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/gamornet/sdss_pred_table.png" alt="SDSS Prediction
+									Table"/>
+								</span>
+
+								<span class="image fit" style="max-width: 75%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/gamornet/candels_pred_table.png" alt="CANDELS Prediction
+									Table"/>
+								</span>
+
+
+								<ul class="actions">
+									<li><a href="https://gamornet.readthedocs.io/en/latest/usage_guide.html#prediction-tables" class="button primary" target="_blank"> Prediction Tables</a></li> 	
+								</ul>
+
+								<hr />
+
+								<h3> Simulations of Galaxies</h3>
+                                <p>We trained GaMorNet on hundreds of thousands of simulated galaxies. For simulating these 
+								   galaxies, we used the below mentioned GitHub repository, which uses GALFIT to simulate 
+								   galaxies in parallel. This simple repository can be used in any situation where someone 
+								   needs to simulate a large number of galaxy surface brightness profiles. 
+								</p>
+
+								<ul class="actions">
+									<li><a href="https://github.com/aritraghsh09/GalaxySim" class="button primary" target="_blank"> GalaxySim Code <i class="icon brands fa-github"></i></a></li> 	
+								</ul>
+
+							</section>
+
+					</div>
+
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Aritra Ghosh</li><li>Design: Based on Massively from <a href="https://html5up.net"
+						 target="_blank">HTML5 UP</a></li><li>Background Image: <a href="https://apod.nasa.gov/apod/ap180506.html" target="_blank">Dave Lane</a></li><li><a href="https://github.com/aritraghsh09/academic-website" 
+						 target="_blank">Website Source Code</a></li></ul>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

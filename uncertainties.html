@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Astrophysics Machine Learning Uncertainties | Aritra Ghosh</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Estimating the uncertainties of predictions by machine
+		learning algorithms is extremely crucial to use them effectively for astronomy and
+		Astrophysics" />
+        <meta name="keywords" content="machine learning uncertainties, 
+		deep learning uncertainties, astronomy machine learning uncertainties,
+		astronomy deep learning uncertainties,
+		bayesian deep learning, astronomy bayesian deep learning,
+		bayesian neural network, astronomy bayesian neural network" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-47Z4SFM7FZ"></script>
+		<script>
+ 		 window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-47Z4SFM7FZ');
+		</script>
+		
+        <!-- ACTIVATING MATHJAX TO WRITE LATEX   -->	
+		<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+       	</script>
+       	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+		
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Aritra | &#x0985;&#x09B0;&#x09BF;&#x09A4;&#x09CD;&#x09B0;&nbsp;</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about_me.html">About Me</a></li>
+							<li><a href="research.html">Research</a></li>
+							<li><a href="teaching.html">Teaching &amp Mentoring</a></li>
+							<li><a href="outreach.html">Outreach</a></li>
+							<li><a href="advocacy.html">Advocacy</a></li>	
+							<li><a href="cv.html">CV</a></li>			
+						</ul>
+						<ul class="icons">
+							<li><a href="mailto:aritraghsh09@gmail.com" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/aritraghsh09" target="_blank"  class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://twitter.com/aritraghsh09" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/aritra-ghosh-169ba582" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+
+								<header class="major">
+									<h2> Machine Learning Uncertainties in Astronomy</h2>
+									<p>Robust uncertainty estimation is crucial in order to realize the full potential of ML 
+									   in astronomy.
+									</p>
+
+									<span class="image fit" style="max-width: 70%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/misc/ml_uncertainties.png" alt="Illustration of
+									uncertainties of predictions by machine learning algorithms in 
+									astronomy."/>
+									<figattr>&copy; Aritra Ghosh | NGC 3324 : JWST (Credit:NASA/ESA/CSA/STScI) | 
+										Plot Credit: Yarin Gal's Ph.D. Thesis</figattr>
+									</span>
+							
+								</header>
+
+								<hr />
+
+								<h3>Machine Learning & Uncertainties</h3>
+								<p>
+									Although the use of machine learning (ML) has grown exponentially in astronomy over the last decade,
+									there has been a very limited amount of work exploring the uncertainties of the predictions made 
+									by various machine learning algorithms. Thus, one focus of my research has been to develop and test
+									techniques that enable us to robustly estimate uncertainties for predictions made by our ML frameworks.
+								</p>
+
+								<p>	
+									Specifically with respect to galaxy morphology determination :- From the
+									early attempts at using a CNN to classify galaxies morphologically to the largest ML-produced
+									morphological catalogs currently available, <b><em>most CNNs have provided broad morphological
+									classifications.</em></b> There has been very limited work on estimating morphological parameters
+									using CNNs; and <em><b>there has been no work on estimating robust uncertainties of CNN determined
+									morphological parameters. Even popular non-ML tools like Galfit severely underestimate uncertainties
+									by values as high as $\sim75\%$</b></em>. Meanwhile, the computation of full Bayesian posteriors for
+									different morphological parameters is crucial for drawing scientific inferences that account for 
+									uncertainty and thus are indispensable in the derivation of robust scaling relations or tests of 
+									theoretical models using morphology.
+								</p>
+
+								<p><em><b>These motivated us to develop <a href="gampen.html">GaMPEN</a>, a machine learning framework that
+								can robustly estimate posterior distributions for various morphological parameters.
+								</b></em> The figure below shows a few examples of GaMPEN's application on randomly selected simulated galaxies.
+
+								<span class="image fit" style="max-width: 75%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/gampen/pred_dists.png" 
+									alt="Plot showing predicted distributions of GaMPEN
+									for two randomly selected galaxies."/>
+									<figattr>Posteriors predicted by GaMPEN for two randomly selected simulated Hyper Suprime-Cam galaxies.</figattr>
+								</span>	
+
+								</p>
+
+								<hr />
+
+								<h3 id="uncertainties">Posterior Estimation/Uncertainty Prediction</h3>
+
+								<p>
+								<span class="image fit" style="max-width: 75%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/gampen/workflow_gampen.png" 
+									alt="Diagram showing how uncertainties are predicted by GaMPEN"/>
+									<figattr>Workflow diagram demonstrating how GaMPEN estimates posterior distributions</figattr>
+								</span>
+
+								To create a Bayesian framework while predicting morphological parameters, we have to treat the model 
+								itself as a random variable---or more precisely, the weights of our network $\boldsymbol{\omega}$, 
+								must be probabilistic distributions instead of single deterministic values. For a network with 
+								weights, $\boldsymbol{\omega}$, and a training dataset, $\mathcal{D}$, of size $N$ with input 
+								images $\left\{\boldsymbol{X}_{1}, \ldots, \boldsymbol{X}_{N}\right\}$ and output parameters 
+								$\left\{\boldsymbol{Y}_{1}, \ldots, \boldsymbol{Y}_{N}\right\}$, the posterior of the network weights, 
+								$p(\boldsymbol{\omega} \mid \mathcal{D}) $ represents the plausible network parameters. To predict the 
+								probability distribution of the output variable $\boldsymbol{\hat{Y}}$ given a new test 
+								image $\boldsymbol{\hat{X}}$, we need to marginalize over all possible weights $\boldsymbol{\omega}$:
+
+								$$
+								p(\boldsymbol{\hat{Y}} \mid \boldsymbol{\hat{X}}, \mathcal{D})=\int p(\boldsymbol{\hat{Y}} \mid \boldsymbol{\hat{X}}, \boldsymbol{\omega}) p(\boldsymbol{\omega} \mid \mathcal{D}) d \boldsymbol{\omega} .
+								$$
+
+								Using variational inference and dropout, we can approximate the integral in as 
+
+								$$
+								\int p(\boldsymbol{\hat{Y}} \mid \boldsymbol{\hat{X}}, \boldsymbol{\omega}) p(\boldsymbol{\omega} \mid \mathcal{D}) d \boldsymbol{\omega} \approx \frac{1}{T} \sum_{t=1}^{T} p(\boldsymbol{\hat{Y}} \mid \boldsymbol{\hat{X}}, \boldsymbol{\omega}_t) ,
+								$$
+
+								wherein we perform $T$ forward passes with dropout enabled and $\boldsymbol{\omega}_t$ is the 
+								set of weights during the $t^{th}$ forward pass. This procedure is what is referred to as 
+								Monte Carlo Dropout. <em><b>However, only performing Monte Carlo dropout is not enough!</b></em>
+								</p>
+
+								<p>Our training data consists of noisy input images by design, but we know the corresponding morphological 
+									parameters with perfect accuracy. However, due to the different amounts of noise in each image, the 
+									predictions of GaMPEN at test time should have different levels of uncertainties. Thus, 
+									in this situation, we train GaPEN to predict aleatoric uncertainties.</p>
+
+								<p>Although we would like to use GaMPEN to predict aleatoric uncertainties, the covariance matrix,
+									 $\boldsymbol{\Sigma}$, is not known {\it a priori}. Instead, we train GaMPEN to learn these 
+									 values by minimizing the negative log-likelihood of the output parameters for the training set, 
+									 which can be written as
+									
+									 $$
+									 \begin{split}
+									- \log \mathcal{L}_{VI} \propto  \sum_{n} & \frac{1}{2}\left[\boldsymbol{Y}_{n}-\boldsymbol{\hat{\mu}}_{n}\right]^{\top} \boldsymbol{\hat{\Sigma_n}}^{-1}\left[\boldsymbol{Y}_{n}-\boldsymbol{\hat{\mu}}_{n}\right] \\ 
+									& + \frac{1}{2} \log [\operatorname{det}(\boldsymbol{\hat{\Sigma_n}})] + \lambda \sum_{i}\left\|\boldsymbol{\omega_{i}}\right\|^{2} .
+									\end{split}
+									$$
+
+									where $\boldsymbol{\hat{\mu}}_n$ and $\boldsymbol{\hat{\Sigma}}_n$ are the mean and covariance matrix of the multivariate 
+									Gaussian distribution predicted by GaMPEN for an image, $\boldsymbol{X}_n$. $\lambda$ is the strength of the regularization
+									term, and $\boldsymbol{\omega}_i$ are sampled from $q(\boldsymbol{\omega})$. <em>Note that the above function contains the 
+									inverse and determinant of the covariance matrix -- calculating can be numerically unstable. Refer to the GaMPEN paper on
+									how to navigate this. 
+									</em>	
+								</p>
+
+								<p>Thus to predict uncertainties:-
+
+								<ul>
+									<li>For every image, GaMPEN predicts the parameters of a multivariate Gaussian distribution
+										($\boldsymbol{\mu}$,$\boldsymbol{\Sigma}$). We then draw a sample from this distribution.</li>
+									<li>Now the network is slightly altered using Monte Carlo Dropout, and the above step is re-performed
+										with a slightly different estimate of ($\boldsymbol{\mu}$,$\boldsymbol{\Sigma}$).
+									</li>
+									<li>The last step is now repeated 1000 times for each galaxy</li>
+								</ul>
+								</p>
+
+								<p><b><em>
+									The combination of the above two steps allows us to estimate robust uncertainties for 
+									GaMPEN predictions by incorporating both aleatoric and epistemic uncertainties intro
+									our predictions. GaMPEN is the first machine learning framework that can estimate 
+									posterior distributions for multiple morphological parameters of galaxies.
+
+								</em></b>
+								</p>
+
+								<hr />
+
+								<h3>Are our predicted uncertainties accurate?</h3>
+
+								<p>
+								<span class="image fit" style="max-width: 55%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/gampen/coverage_probs.png" 
+									alt="Plot showing coverage probabilities attained by GaMPEN on 
+									the test set. They are all pretty close to the theoretically 
+									expected values."/>
+								</span>	
+								
+								For a framework which estimates full Bayesian distributions, it's not 
+								sufficient to only check how well the predicted values line up with the 
+								true values. It's impertinent to check the nature of the predicted 
+								distributions:- <em>Are they of the correct shape? Are they too narrow?
+								Or too wide?</em>
+								</p>
+
+								<p>One great way to check the predicted distributions is to calculate
+								   the percentile coverage probabilities, defined as the percentage of 
+								   the total test examples where the true value of the parameter lies 
+								   within a particular confidence interval of the predicted distribution. 
+								   We calculate the coverage probabilities associated with the 
+								   $68.27\%$, $95.45\%$, and $99.73\%$ central percentile confidence levels, 
+								   corresponding to the $1\sigma$, $2\sigma$, and $3\sigma$ confidence levels 
+								   for a normal distribution. For each distribution predicted by GaMPEN, we 
+								   define the $68.27\%$ confidence interval as the region on the x-axis of the 
+								   distribution that contains $68.27\%$ of the most probable values of the integrated 
+								   probability distribution.
+								</p>
+
+								<p>We calculate the $95.45\%$ and $99.73\%$ confidence intervals of the predicted 
+									distributions in the same fashion. Finally, we calculate the percentage of test 
+									examples for which the true parameter values lie within each of these confidence 
+									intervals. An accurate and unbiased estimator should produce coverage probabilities 
+									equal to the confidence interval for which it was calculated (e.g., the coverage 
+									probability corresponding to the $68.27\%$ confidence interval should be $68.27\%$).
+									As the above figure shows the coverage probabilities for the three output parameters 
+									individually (top three panels), as well as the coverage probabilities averaged over 
+									the three output variables (bottom panel). As can be seen from the figure above, 
+									GaMPEN's coverage probabilities almost perfectly line up with the predicted 
+									distributions. <b><em>Thus uncertainties predicted are well-calibrated 
+									($\lesssim 5\%$ deviation).
+									</em></b>
+								</p>
+								<p>	
+									It is important to note that the inclusion of the full covariance matrix in 
+									the loss function allowed us to incorporate the relationships between the different 
+									output variables in GaMPEN predictions. <b><em>This crucial step allowed us to achieve 
+									simultaneous calibration of the coverage probabilities for all three output variables.</em></b>
+									In contrast, using only the diagonal elements of the covariance matrix resulted in 
+									substantial disagreement, for a fixed dropout rate, among the coverage probabilities 
+									of the different parameters.
+								</p>
+								
+							</section>
+
+					</div>
+
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Aritra Ghosh</li><li>Design: Based on Massively from <a href="https://html5up.net"
+						 target="_blank">HTML5 UP</a></li><li>Background Image: <a href="https://apod.nasa.gov/apod/ap180506.html" target="_blank">Dave Lane</a></li><li><a href="https://github.com/aritraghsh09/academic-website" 
+						 target="_blank">Website Source Code</a></li></ul>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

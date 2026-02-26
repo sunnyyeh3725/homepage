@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>HSC Structural Parameter Catalog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="We used the Galaxy Morphology Posterior Estimation Network (GaMPEN) 
+		to estimate morphological parameters and associated uncertainties for $\sim 8$ million galaxies 
+		in the Hyper Suprime-Cam (HSC) Wide survey with redshifts less than equal to 0.75 and at magnitudes
+		brighter than 23" />
+        <meta name="keywords" content="bulge disk decomposition, galaxy structural parameters, galaxy morphology,
+		gampen, hyper suprime-cam" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-47Z4SFM7FZ"></script>
+		<script>
+ 		 window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-47Z4SFM7FZ');
+		</script>
+		
+        <!-- ACTIVATING MATHJAX TO WRITE LATEX   -->	
+		<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+       	</script>
+       	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+		
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Aritra | &#x0985;&#x09B0;&#x09BF;&#x09A4;&#x09CD;&#x09B0;&nbsp;</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about_me.html">About Me</a></li>
+							<li><a href="research.html">Research</a></li>
+							<li><a href="teaching.html">Teaching &amp Mentoring</a></li>
+							<li><a href="outreach.html">Outreach</a></li>
+							<li><a href="advocacy.html">Advocacy</a></li>	
+							<li><a href="cv.html">CV</a></li>			
+						</ul>
+						<ul class="icons">
+							<li><a href="mailto:aritraghsh09@gmail.com" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/aritraghsh09" target="_blank"  class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://twitter.com/aritraghsh09" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/aritra-ghosh-169ba582" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+
+								<header class="major">
+									<h3>Hyper Suprime-Cam Structural Parameter Catalog</h3>
+									<p>Morphological Parameters and Associated Uncertainties for 8 Million Galaxies in the Hyper Suprime-Cam Wide Survey</p>
+
+									<span class="image fit" style="max-width: 85%;
+										display: block;
+ 										margin-left: auto;
+  										margin-right: auto;">
+										<img src="images/research/hsc_struc_params/struc_params_header.png" alt="Image 
+										showing potential science impacts of our HSC structural parameter catalog"/>
+										<figattr>Highlights of our HSC structural parameter catalog shown along with science cases we 
+											are currently pursuing using this catalog.
+										</figattr>
+									</span>
+
+									<ul class="actions special wrap">
+										<li><a href="https://arxiv.org/abs/2212.00051" class="button primary small" 
+											target="_blank">ArXiv</i></a></li>
+										<li><a href="https://doi.org/10.3847/1538-4357/acd546" 
+											class="button primary small" target="_blank">ApJ</a></li>
+										<li><a href="https://gampen.readthedocs.io/en/latest/Public_data.html#hsc-wide-pdr2-galaxies" class="button primary small" target="_blank">Download Structural Parameter Catalog</a></li> 
+										<li><a href="gampen.html" class="button primary small">GaMPEN <i class="fas fa-code fa-1.5x"></i></a></li>
+									</ul>
+							
+								</header>
+
+								<hr />
+
+								<h3>Dataset & Algorithm Used</h3>
+								<p>We used the Galaxy Morphology Posterior Estimation Network (GaMPEN) to 
+									estimate the structural parameters (bulge-to-total light ratio, 
+									effective radius, and total magnitude) and associated uncertainties 
+									for all galaxies in the Hyper Suprime-Cam (HSC) Wide survey with $z \leq 0.75$ and $m \leq 23$.
+								</p>
+								
+								<span class="image fit" style="max-width: 85%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/hsc_struc_params/gampen_schematic.png" alt="Image 
+									showing a schematic diagram of GaMPEN"/>
+									<figattr>Schematic diagram of GaMPEN. GaMPEN is a machine learning framework that 
+										estimates Bayesian posteriors of (user-defined) galaxy structural parameters for
+										arbitrarily large numbers of galaxies.</figattr>
+								</span>
+
+								<p>We use different imaging bands across different redshift ranges to trace the same ground-frame 
+								   wavelength. The breakdown of our sample into the three different redshift bins is shown below.
+								</p>
+								<span class="image fit" style="max-width: 45%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/hsc_struc_params/sample_table.png" alt="Image 
+									showing the breakdown of sample across the different redshift slices."/>
+								</span>
+
+								<hr />
+
+								<h3>Training GaMPEN using $ < 1 \% $ of our Data</h3>
+								<p>We first train GaMPEN on simulations of galaxies and then fine-tune the 
+									already trained network using $ <1 \% $ 
+									of our total dataset for training. This is an important demonstration that 
+									ML frameworks can be used to measure galaxy properties in new surveys, 
+									which do not have already-classified large training sets readily available. 
+									Our implemented two-step process provides a new framework that can be easily used for
+									 upcoming large imaging surveys like the Rubin-LSST, Euclid, and NGRST.
+								</p>
+
+								<span class="image fit" style="max-width: 90%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/hsc_struc_params/training_procedure.png" alt="Image
+									depicting the two stage process we use to train GaMPEN."/>
+								</span>
+
+								<hr />
+
+								<h3>Accuracy of GaMPEN's Predictions</h3>
+
+								<p>We compare the GaMPEN's predictions against ground-truth values in 
+									simulations, as well as the predictions of
+									traditional light-profile fitting codes. GaMPEN's measurements are consistent 
+									overall and outperform those of GALFIT for galaxies with 
+									$R_e \leq 2$" ($\sim 12.6$ kpc at $z=0.5$)
+								</p>
+
+								<p>GaMPEN's predicted values against ground truth is show below for a set of simulated HSC galaxies</p>
+								<span class="image fit" style="max-width: 80%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/hsc_struc_params/pred_true.png" 
+									alt="The true values of the galaxy parameters plotted against 
+									the most probable values predicted by \gampen{}."/>
+								</span>
+
+
+								<p>We show below a few examples of applying GaMPEN on real HSC galaxies</p>
+
+								<span class="image fit" style="max-width: 90%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/hsc_struc_params/example_galaxies.png" alt="Image
+									showing posterior distributions predicted by GaMPEN for different galaxies."/>
+								</span>
+
+								<hr />
+
+								<h3>Accuracy of GaMPEN's Posteriors</h3>
+								<p>By comparing our results to those obtained using light-profile fitting, 
+									we demonstrate that <b><i>GaMPEN's predicted posterior distributions are 
+									well-calibrated ($\lesssim 5\%$ deviation) and accurate. 
+									This represents a significant improvement over light profile fitting algorithms 
+									which underestimate uncertainties by as much as $\sim60\%$.</i></b>
+								</p>
+
+								<p>Below, we plot the percentile coverage probabilities for the $68.27\%$ confidence interval 
+									obtained by GaMPEN on our HSC sample compared to coverage probabilities obtained by various 
+									light-profile fitting algorithms on simulated Euclid data. 
+									The coverage probabilities are defined as the percentage of the total test examples 
+									where the value determined using light profile fitting lies  within  a  particular confidence 
+									interval of the predicted distribution.
+								</p>
+								
+								<span class="image fit" style="max-width: 70%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/hsc_struc_params/cov_prob_euclud_comp.png"
+									 alt="Percentile coverage probabilities for the $68.27\%$ 
+									 confidence interval obtained by \gampen{} on our HSC sample compared to 
+									 coverage probabilities obtained by various light-profile fitting algorithms 
+									 on simulated Euclid data"/>
+									<figattr>The rightmost set of bars 
+										shows the values calculated 
+										on the entire dataset, while the other sets display values calculated on sub-samples 
+										of galaxies with specific magnitude ranges (AB mag, shown on the x-axis). 
+										As this figure shows,
+										Compared to light-profile fitting tools, the uncertainties predicted by GaMPEN are better 
+										calibrated by $\sim15-25\%$ overall and by as much as $\sim60\%$ for the brightest galaxies.
+									</figattr>
+								</span>
+								
+								<hr />
+
+							</section>
+							
+
+					</div>
+
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Aritra Ghosh</li><li>Design: Based on Massively from <a href="https://html5up.net"
+						 target="_blank">HTML5 UP</a></li><li>Background Image: <a href="https://apod.nasa.gov/apod/ap180506.html" target="_blank">Dave Lane</a></li><li><a href="https://github.com/aritraghsh09/academic-website" 
+						 target="_blank">Website Source Code</a></li></ul>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

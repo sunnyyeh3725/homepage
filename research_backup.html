@@ -1,0 +1,326 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Research | Sunny Yeh | Physical Oceanography</title>
+    	<link rel="icon" href="media/favicon.jpg" type="image/jpeg">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Sunny Yeh uses theory, model simulations, and observations to understand the dynamic ocean and its role in the Earth system." />
+		<meta name="keywords" content="cheng yang yeh, sunny yeh, UCLA, atmospheric and oceanic sciences,
+		ocean circulation, ocean energy budget, geophysical fluid dynamics, machine learning, data science, machine learning,
+		mesoscale eddies, mesoscale energy, climate" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-51YSF57KKT"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-51YSF57KKT');
+		</script>		
+
+		<!-- ACTIVATING MATHJAX TO WRITE LATEX   -->	
+		<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+       	</script>
+       	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Sunny Yeh</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="research.html">Research</a></li>
+							<li><a href="teaching.html">Teaching</a></li>
+							<li><a href="mentoring.html">Mentoring</a></li>
+							<li><a href="cv.html">CV</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="mailto:sunnyyeh@atmoc.ucla.edu" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/sunnyyeh3725" target="_blank"  class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://sunnyyeh3725.github.io" target="_blank"  class="icon fa-link"><span class="label">Linktree</span></a></li>
+						</ul>
+					</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+
+							<section class="post" style="padding-bottom: 1rem;">
+								
+								<span class="image fit" style="max-width: 90%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/research_header.jpeg" alt="Header image showing the word Research
+									against a backdrop of different astronomical objects" />
+									<figattr>Adobe Firefly</figattr>
+								</span>
+
+								<ul class="actions fit small">
+									<li><a href="#big_themes" class="button fit small more scrolly">Primary Research Themes</a></li>
+									<!--<li><a href="#pre_phd" class="button fit small more scrolly">Pre-Ph.D. Work</a></li>-->
+									<li><a href="#publications" class="button fit small more scrolly">Publications</a></li>	
+								</ul>
+							
+								<ul class="actions fit small">
+									<li><a href="hsc_rad_den.html" class="button fit primary small">HSC Size-Environment Correlation</a></li>
+									<li><a href="hsc_struc_par_catalog.html" class="button fit primary small">Structural Parameters for ~8 Million HSC Galaxies</a></li>
+									<li><a href="gampen.html" class="button fit primary small">GaMPEN  <i class="fas fa-code fa-1.5x"></i></a></li>
+								</ul>
+
+							</section>
+
+							<article class="post" id="big_themes">
+								<h2>Primary Research Themes</h2>
+								<p>Over the last few years, my research (and that of my mentees) has spanned a few broad themes. Each
+								of these themes is briefly described below. You can click on the buttons corresponding to each theme to 
+								explore each topic!</p>
+								
+								<p>
+									<i>Topics/Buttons with spiny wheels beside them denote work/page-building in progress.</i>
+								</p>
+
+								<ul class="actions fit small">
+									<li><a href="#gal_evo" class="button fit small more scrolly">Galaxy Evolution & Cosmology</a></li>
+									<li><a href="#morph_catalogs" class="button fit small more scrolly">Structural Parameter & Morphology Catalogs</a></li>
+								</ul>
+								<ul class="actions fit small">
+									<li><a href="#anomaly" class="button fit small more scrolly">Image-Based Anomaly Detection</a></li>
+									<li><a href="#astroml" class="button fit small more scrolly">Robust Machine Learning in Astronomy</a></li>	
+								</ul>
+
+								<hr />
+								
+								<header>
+								<h3 id="gal_evo">Galaxy Evolution & Cosmology</h3>
+								<p>Novel insights into galaxy evolution and cosmology using large-volume surveys and robust statistics.</p>
+								</header>
+								<span class="image fit" style="max-width: 60%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/gal_evo_illustration.png" alt="Illustration showing the history 
+									of the formation of the universe from big-bang to the present day." />
+									<figattr>
+										Illustration showing the history of our universe (adapted from <a href="https://science.nasa.gov/universe/overview/" target="_blank">NASA</a>). My 
+										work focuses on the right three panels --- starting from the formation of galaxies in cradles of dark matter to the galaxies of today.
+									</figattr>
+								</span>
+
+								<h4>Using Galaxy Structure</h4> 
+								<p>The structural parameters of galaxies and their diverse morphological features have played
+								an instrumental role to further our understanding of galaxy formation
+								and evolution. I have focused on leveraging the intricate correlations between 
+								the structure of a galaxy and its other attributes (e.g., stellar mass, AGN activity,
+								environmental density) for millions of samples to investigate:- 
+								(a) different baryonic processes within galaxies, (b) the effect of dark matter halos
+								on galaxy evolution, and (c) AGN-galaxy co-evolution.</p>
+
+								<ul class="actions special wrap">
+									<li><a href="hsc_rad_den.html" class="button small">HSC Size-Environment Correlation</a></li>
+									<li><a href="#" class="button small">HSC AGN Triggering <i class="fas fa-spinner fa-pulse fa-1.2x"></i></a></li>
+									</a></li>
+								</ul>
+
+
+								<h4>Using Mergers & LSB features <i class="fas fa-spinner fa-pulse fa-1.2x"></i> </h4>
+								<p>Deep-Wide optical surveys of the sky (e.g., HSC, Rubin-LSST) are pushing the observations of galaxies 
+									to lower surface brightness limits than has ever been available over such large volumes. I am currently
+									working on  developing robust techniques to detect a wide variety of 
+									low-surface brightness features and mergers at various stages. We are using these to 
+									gain a better understanding of:- (a) the outskirts of galaxies,
+									(b) the merger history of lower mass galaxies, (c) the role of tidal stripping in groups and clusters, 
+									(d) the lowest surface brightness dwarfs and their evolution. 
+								</p>
+
+								<hr />
+								<header>
+								<h3 id="morph_catalogs">Structural Parameter & Morphology Catalogs</h3>
+								<p>Structural parameters with robust uncertainties for millions of galaxies & AGN hosts</p>
+								</header>
+								<span class="image fit" style="max-width: 65%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/galaxy_montage.png" alt="Image showing a collection of galaxies
+									with a diverse set of morhologies and structures." />
+									<figattr>A montage of diverse galaxy structure | (Top Left & Bottom Right): HSC-SSP and NAOJ |  (Top Right): NASA, ESA, CSA, 
+										STScI, and The PHANGS Team | (Rest): NASA, ESA, STScI/AURA
+									</figattr>
+								</span>
+								<p> Since the mid-20th century, astronomers have 
+									used the structure/morphology of galaxies and AGN hosts 
+									to gain a better understanding of how galaxies form and evolve. 
+									Thus, very large public catalogs of galaxy structure 
+									are essential tools in investigating existing pathways of galaxy
+									evolution and introduce new evolutionary mechanisms.
+								</p>
+
+								<p> I have focused on developing novel Bayesian machine learning frameworks 
+									to determine the structure of millions of galaxies and AGN hosts. In particular, 
+								    I have focused on enabling these frameworks to make robust predictions with well-calibrated 
+								    uncertainties; while necessitating minimal pre-analyzed training data. We have used these 
+								    frameworks to produce one of the largest structural parameter catalogs till date, 
+								    containing $\sim 8$ million Hyper Suprime-Cam (HSC) galaxies.
+								</p>
+
+								<ul class="actions special wrap">
+									<li><a href="hsc_struc_par_catalog.html" class="button small">Structural Parameters for ~8 Million HSC Galaxies</a></li>
+									<li><a href="gampen.html" class="button small">GaMPEN  <i class="fas fa-code fa-1.5x"></i></a></li>
+									<li><a href="https://iopscience.iop.org/article/10.3847/1538-4357/acad79" target="_blank"
+										class="button small">HSC AGN Host Galaxy Morphology </a></li>
+									<li><a href="#" class="button  small">PSFGAN <i class="fas fa-spinner fa-pulse fa-1.2x"></i></a></li>
+									<li><a href="https://gamornet.readthedocs.io/en/latest/usage_guide.html" target="_blank"
+										class="button small">SDSS & CANDELS Morphology Catalog 
+									</a></li>
+									<li><a href="gamornet.html" class="button  small">GaMorNet  <i class="fas fa-code fa-1.5x"></i></a></li>
+								
+								</ul>
+							
+
+								<hr />
+								<header>
+								<h3 id="anomaly">Image-Based Anomaly Detection <i class="fas fa-spinner fa-pulse fa-1.2x"></i> </h3>
+								<p>Hunting interesting needles in imaging haystacks</p>								
+								</header>
+								<span class="image fit" style="max-width: 65%;
+									display: block;
+									margin-left: auto;
+								  	margin-right: auto;">
+									<img src="images/research/anomaly_det.png" alt="Image showing tiny snapshots of many galaxies
+									depcting the challenge of finding anomalies in imaging data" />
+									<figattr>Manually searching for novel/unusual objects in large imaging datasets is an impossible task! </figattr>
+								</span>
+								 <p>The depth and large area of current/upcoming ground and space-based optical/NIR missions 
+									(e.g., Euclid, NGRST, Rubin-LSST) will allow us to find the rarest and most interesting
+								 	distant objects in the Universe out to a redshift beyond 7 when the Universe was only 
+									5% of the age it is today. Although these missions are uniquely positioned to image 
+									these rare objects; finding these small needles in the haystack of TBs imaging data 
+									would be impossible without robust 
+									algorithms to find rare and interesting objects. <p>  
+									
+								<p>I am currently collaborating with 
+									<a href="https://lsstdiscoveryalliance.org/programs/lincc-frameworks/" target="_blank">LINCC Frameworks</a> 
+									engineers to develop a comprehensive anomaly detection framework for large astronomical 
+									imaging datasets.</p>   
+
+
+
+								<hr />
+								<header>
+								<h3 id="astroml">Robust Machine Learning in Astronomy </h3>
+								<p>Developing & testing bespoke algorithms specifically for astronomy</p>
+								</header>
+								<span class="image fit" style="max-width: 60%;
+									display: block;
+									margin-left: auto;
+								  	margin-right: auto;">
+									<img src="images/misc/robot_sky.jpeg" alt="Illustrated Image by Pete Ryan of 
+									a robot looking at the sky signifying machine learning in astronomy" />
+									<figattr>Illustration by <a href="https://www.peterthomasryan.com/" 
+										target="_blank">Pete Ryan</a></figattr>
+								</span>
+								<p>With the emergence of wide-area all-sky surveys, the amount of data in astronomy has been 
+								growing at an unprecedented rate. This has led to machine learning (ML) techniques being 
+								increasingly employed by astronomers for a wide variety of tasks -- from identifying exoplanets
+								to studying galaxies and black holes.<p>
+
+								<p>However, using generic ML tools off-the-shelf as black boxes is dangerous 
+								if we do not understand their accuracy/bias/limitations<i>specifically in 
+								the context of astrophysics.</i> Thus, I have have focused on developing ML frameworks 
+								specifically for astronomical applications, enabling these frameworks to estimate 
+								robust uncertainties, and stress-testing these frameworks to understand their limitations.
+								</p>
+
+
+
+								<ul class="actions special wrap">
+									<li><a href="ml_tests.html" class="button small">Stress-Testing ML in Astronomy</a></li>
+									<li><a href="uncertainties.html" class="button small">Machine Learning Uncertainties
+									</a></li>
+									<li><a href="custom_ml_tools.html" class="button small">Custom-Made ML Tools
+									</a></li>
+								</ul>
+							
+							</article>
+
+							<article class="post" id="publications">
+
+								<h2>Publications <i class="fas fa-graduation-cap"></i> </h2>
+
+								<p>I have a very common name and just searching by my name in ADS 
+								   will not give you correct results. The best technique is to search 
+								   using my ORCiD <code>orcid:"0000-0002-2525-9647"</code> or use the 
+								   links below. The personal list that I maintain below also has links to material 
+								   that is not available via other public platforms.
+								</p>
+
+								<iframe src="https://docs.google.com/document/d/e/2PACX-1vSy3zDC6A0pIxqvFx4tXoNlGhnGw82m5D7Sa4zOw9XIW5NP3Qt3HI-x0rnyQJAIRE-xeZT_kphFA6Ly/pub?embedded=true"
+									style="
+									margin: auto;
+									display: block;
+									padding: 0;
+									border: 2px solid black;
+									width: 85%;
+									height: 120vh" allow="autoplay">
+								</iframe>
+
+								<p>
+								<ul class="actions special wrap">
+									<li><a href="https://docs.google.com/document/d/1q-aP1tytRzisWWUc066JhfO8PjT1PMZJpV9nT7vKbVA/" target="_blank" class="button primary">Personal List</a></li>
+									<li><a href="https://scholar.google.com/citations?user=1ydEy50AAAAJ&hl=en" class="button primary" target="_blank">Google Scholar</a></li>
+									<li><a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A%220000-0002-2525-9647%22&sort=citation_count%20desc%2C%20bibcode%20desc&p_=0" class="button primary" target="_blank">NASA SAO ADS</a></li>
+								</ul>
+								</p>
+
+
+							</article>
+
+					</div>
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Cheng Yang (Sunny) Yeh</li><li>Design based on <a href="https://ghosharitra.com"
+							 target="_blank">Aritra Ghosh</a> and <a href="https://html5up.net"
+							 target="_blank">HTML5 UP</a></li><li>Background: Guadalupe Mountains NP</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

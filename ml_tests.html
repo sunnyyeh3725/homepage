@@ -1,0 +1,432 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Stress Testing Machine Learning in Astronomy | Aritra Ghosh</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Machine Learning models are not black boxes!
+		In order to harness the power of ML
+		in astronomy, it's important to investigate the inner workings and stability of these
+		algorithms." />
+        <meta name="keywords" content="stress testing machine learning, investigating machine
+		learning, how machine learning works, class activation mapping, machine learning interpretability,
+		filter activations, astronomy machine learning interpretability, deep learning interpretability,
+		astronomy deep learning interpretability" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-47Z4SFM7FZ"></script>
+		<script>
+ 		 window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-47Z4SFM7FZ');
+		</script>
+		
+       <!-- ACTIVATING MATHJAX TO WRITE LATEX   -->	
+		<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+       	</script>
+       	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Aritra | &#x0985;&#x09B0;&#x09BF;&#x09A4;&#x09CD;&#x09B0;&nbsp;</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about_me.html">About Me</a></li>
+							<li><a href="research.html">Research</a></li>
+							<li><a href="teaching.html">Teaching &amp Mentoring</a></li>
+							<li><a href="outreach.html">Outreach</a></li>
+							<li><a href="advocacy.html">Advocacy</a></li>	
+							<li><a href="cv.html">CV</a></li>			
+						</ul>
+						<ul class="icons">
+							<li><a href="mailto:aritraghsh09@gmail.com" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/aritraghsh09" target="_blank"  class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://twitter.com/aritraghsh09" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/aritra-ghosh-169ba582" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+
+								<header class="major">
+									<h2>Stress-Testing Machine Learning in Astronomy</h2>
+									<p>Can we harness machine learning properly to accelerate astronomy for the next decade?</p>
+
+									<span class="image fit" style="max-width: 60%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/misc/confused_robot.png" alt="Illustrative diagram stress testing astronomical
+									machine learning. Image showing a confused robot looking through a telescope at the sky" />
+									<figattr>Inset: The "first" JWST color image | Credit: NASA, ESA, CSA, STScI</figattr>
+									</span>
+							
+								</header>
+
+								<hr />
+
+								<p> 
+
+									<span class="image right" style="max-width: 27%;"><img src="images/misc/papers.png" 
+										alt="Image showing a plot of the total number of research articles published 
+										in physics and astronomy during the previous nine years with Machine Learning 
+										in their title or abstract. The growth shown in this figure is almost exponential. "/>
+										<figattr>Total number of papers in physics and astronomy with machine learning in 
+										their title or abstract. Data Source: ADS
+										</figattr>
+									</span>
+									
+									
+									
+									Over the last decade, machine learning (ML) has been increasingly employed by astronomers 
+									for a wide variety of tasks -- from identifying exoplanets to studying galaxies and black 
+									holes. Especially, Convolutional Neural Networks (CNNs) have revolutionized the field of 
+									image processing and have become increasingly popular for determining galaxy morphology. 
+								</p>
+
+								<p> However, despite all this work, a few particular challenges have remained, which are crucial
+									to address in order to harness ML fully for the next generation of surveys (like Rubin, 
+									Roman, and Euclid). I have focused a part of my research in addressing these challenges:-
+										<ul>
+											<li>How stable are predictions to rotational transformations?</li>
+											<li>Can we train ML models without gigantic real datasets and still obtain good
+												results on real data?
+											</li>
+											<li>Can the same algorithms be applied to data over a range of redshifts and form
+												different surveys?
+											</li> 
+											<li>Can we interpret/investigate the decision making process of our algorithms?</li>
+										</ul>
+								</p>
+
+								<ul class="actions special wrap">
+									<li><a href="#rot_trans" class="button more scrolly small">Stability Under Rotations</a></li>
+									<li><a href="#real_data" class="button more scrolly small">Training with Minimal Real Data</a></li>
+									<li><a href="#surveys" class="button more scrolly small">Applicability Across Surveys</a></li>
+									<li><a href="#viz" class="button more scrolly small">AstroML Interpretability</a></li>
+								</ul>
+
+								<hr />
+
+								<h3 id="rot_trans">Prediction Stability Against Rotational Transformations</h3>
+
+								<span class="image fit" style="max-width: 75%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/real_data_gampen_video_high_res.gif" 
+									alt="Video showing how stable predictions by our neural network
+									GaMPEN are against rotations."/>
+									<figattr>This video is optimized for fast loading. For a higher resolution version,
+										watch it on <a href="https://youtu.be/Oj3QXqZ19-4" target="_blank">YouTube</a>
+									</figattr>
+								</span>
+
+								<p>Although Convolutional Neural Networks (CNNs) learn to recognize features that are 
+								   invariant under translation -- the learned features are typically not rotationally
+								   invariant. However, this is a problem if CNNs are to be used in astronomy -- especially,
+								   for determining the morphology of galaxies. A CNN should be able to identify the same 
+								   galaxy at two different orientations and return the same values. <em>But is this true?
+								   To what level are the predictions stable? </em>
+								</p>
+
+								<p>The above video shows the stability of predictions by <a href="gampen.html">GaMPEN</a>
+								   (Galaxy Morphology Posterior Estimation Network) when an input galaxy from the Hyper
+								   Suprime-Cam Wide survey is fed into the framework and slowly rotated. GaMPEN's predictions of all three 
+								   output parameters -- bulge-to-total light ratio ($L_B/L_T$), effective radius ($R_e$),
+								   and flux -- are stable against rotations.The modes of the predicted values deviate by
+								   $\lesssim 5\%$. <b><em>This importantly shows to what level the predictions are stable 
+								   against rotations.
+								   </em></b>
+								</p> 
+
+								<p><em>But what do we do to make this happen?</em> Our approach to do this two fold:-
+
+									<ul>
+										<li>We have simulated galaxies with the same structural parameters, but different
+											orientations in our training dataset.
+										</li>
+										<li>
+											We augment the number of real galaxies in our dataset by applying different random
+											rotational transformations on the input data during training. 
+										</li>
+									</ul>
+								
+									The above two steps ensure that the network sees enough examples of the same galaxy with different
+									orientations, and this we are able <em>induce rotational invariance</em> into our networks
+									even though inherently they don't possess it. 
+								</p>
+
+								<hr />
+
+								<h3 id="real_data">Training ML Algorithms Without Vast Amounts of Real Data</h3>
+
+								<p>
+									<span class="image left" style="max-width: 20%;"><img src="images/misc/chicken_egg.png" 
+										alt="Illustration showing the chicken egg problem framed as between machine learning
+										models and their produced catalog. If the ML models need catalogs to train, how are 
+										we going to produce the next generation of catalogs with them."/>
+										<figattr> Base Image: <a href="www.vectorstock.com" target="_blank">Vector Stock</a>
+										</figattr>
+									</span>
+
+									One of the challenges in training ML models is the vast amount of data that they need 
+									for training. With regards to astronomy, this leads to a specific challenge: if parameter
+									catalogs for the next generation of surveys are to be produced using ML; how can we train
+									these ML algorithms in the absence of produced catalogs from these surveys?
+								</p>
+
+								<p>In order to address this, we have used a two-fold strategy:-
+									<ul>
+										<li>Train all the layers in a CNN using semi-realistic simulations.</li>
+										<li>Fine-tune the entire network or only the last few layers using a small amount
+											of hand-annotated real images. 
+										</li>
+									</ul>
+
+									Since semi-realistic simulations are cheap to make, we are able to perform most 
+									of the heavy training workload using large numbers of simulated galaxies. However,
+									a network trained on simply simulations fails to deliver satisfactory results. Thus, we 
+									fine-tune the trained model using a small number of galaxies which we analyze manually.
+									Depending on the model and amount of real data being used, we have found it to be prudent
+									to sometimes fine-tune only the latter layers. The logic behind this approach is that, in a CNN, 
+									the deeper feature maps identify more complicated features while the earlier layers 
+									identify more basic features (like lines, shapes and edges) [see later sections on this page.].
+						
+
+								</p>
+
+								<p> This two step approach has allowed to obtain excellent results for both classification as well
+									as parameter/posterior estimation problems using <a href="gamornet.html">GaMorNet</a> and 
+									<a href="gampen.html">GaMPEN</a>. Using this approach we have classified millions of galaxies 
+									across SDSS, CANDELS, and HSC. <b><em>The above approach has allowed us to reduce the amount
+									of real data needed for training
+									by 80-90%</em></b>
+								</p>
+
+
+								<hr />
+
+								<h3 id="surveys">Applicability Across Surveys/Redshfits</h3>
+
+								<p><span class="image fit" style="max-width: 75%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/misc/diff_surveys.png" 
+									alt="Image showing same region of the sky when imaged using SDSS, HSC,
+									and CANDELS."/>
+									<figattr>The same region of the sky imaged by different surveys.
+										Individual images from <em><a href="https://ui.adsabs.harvard.edu/abs/2021NatRP...3..712M/abstract" 
+										target="_blank"> Melchior et al. 2021</em></a>
+									</figattr>
+									</span>
+									
+								   Over the next decade, new extragalactic data will be generated in astronomy, by different telescopes
+								   at a wide variety of redshifts, wavelengths, depths, and pixel-scales. Thus, it's a problem if we need
+								   to develop a separate model architecture every time our target dataset changes (with the same underlying
+								   task.)
+								</p>
+
+								<p>One of my pushes has been to develop and test the applicability of models of the same underlying architecture
+								   across data of a wide variety of imaging qualities. <b><em>In our papers we have successfully demonstrated the
+								   applicability of our algorithms across datasets of different depths, and pixel scales at different redshfits
+								   as outlined below.</em></b> The two step of approach of first training on simulations and then fine-tuning using
+								   real data has enabled us to achieve this.
+								</p>
+
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>ML Tool</th>
+												<th>SDSS</th>
+												<th>HSC</th>
+												<th>HST Legacy Fields</th>
+										</thead>
+										<tbody>
+											<tr>
+												<td>GaMorNet</td>
+												<td>Done</td>
+												<td>Done</td>
+												<td>Done</td>
+											</tr>
+											<tr>
+												<td>GaMPEN</td>
+												<td></td>
+												<td>Done</td>
+												<td>In Progress</td>
+											</tr>
+											
+										</tbody>
+									
+									</table>
+								</div>
+
+								<hr />
+
+								<h3 id="viz">AstroML Interpretability -- Investigating ML decision making</h3>
+
+								<p>It is often said that deep-learning models are "black-boxes" learning
+								   features that are difficult to understand. Although this might be true
+								   for certain types of deep-learning models, it's definitely not true
+								   for CNNs. The representations that are learned by CNNs are highly amenable
+								   to visualization, primarily because they are representations of visual
+								   concepts. Since mid 2010s, many techniques have been developed for visualizing
+								   and interpreting these representations. <em><b>We have used these techniques 
+								   in order to have a better understanding of the decision making process of 
+								   our algorithms.
+								   </b></em>
+								</p>
+
+								<h4>Class Activation Mapping</h4>
+
+								<p>
+									<span class="image fit" style="max-width: 65%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/grad_cam.png" 
+									alt="Heatmaps of class activation applied to four different galaxies
+									showing regions that are heavily used by GaMorNet in its decision making
+									process"/>
+									<figattr>Heatmaps of class activation showing regions of images (in red) 
+										that are heavily used by GaMorNet in its decision making process.
+									</figattr>
+									</span>
+
+									One of the techniques we used to investigate GaMorNet's decision making process is
+									class activation mapping (CAM) shown above.  A class activation heatmap is a 2D grid of 
+									scores associated with a specific output class, computed for every location in any input image, 
+									indicating how important each location is with respect to the class under consideration. As 
+									the above image shows, for the galaxies with spiral arms, GaMorNet heavily uses the presence of 
+									the spiral arms to infer that these are disk-dominated galaxies. The right two images demonstrate
+									that despite secondary objects being in frame, GaMorNet correctly focuses on the galaxy of interest
+									at the center of the image. <em><b>This allows us an interesting sneak-peak into how GaMorNet
+									classifies different galaxies. 
+									</b></em>
+								</p>
+
+								<h4>Visualizing Intermediate Activations</h4>
+
+								<p>
+									<span class="image fit" style="max-width: 75%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/intermediate_activations.png" 
+									alt="Visualizing the intermediate activation outputs from the 
+									different layers shown for a case when a spiral galaxy is fed
+									into GaMorNet"/>
+									<figattr> Intermediate activations from the first two convolutional 
+										layers of GaMorNet when a spiral galaxy is fed into it.
+									</figattr>
+									</span>
+
+									Another technique we used to investigate GaMorNet's decision making process is to 
+									visualize the different intermediate activations that are output by different 
+									convolutional layers in the network. This helps us to understand how an input to GaMorNet
+									is decomposed as it propagates through the network to the final output value.
+								</p>
+
+								<p>From the image shown above it is clear, that <b><em>GaMorNet first almost perfectly separates
+								the galaxy from the background </em></b> and then, after that, <em><b>focuses on subparts of the 
+								galaxy in question.
+								</b></em>
+								</p>
+
+								<h4>Visualizing Filter Patterns</h4>
+								<p>
+								<span class="image fit" style="max-width: 75%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/filter_patterns.png" 
+									alt="Visualizing the filter patterns from the 
+									different layers of a trained GaMorNet framework."/>
+									<figattr>Different learned filter patterns at different depths
+										shown for a trained GaMorNet framework. 
+									</figattr>
+									</span>
+
+									One more way to inspect the filters learned by CNNs is to display the visual
+									pattern that each filter in the convolutional layers is meant to respond to. 
+									This can be done with gradient ascent in the input space -- applying gradient 
+									descent to the value of the input image of a CNN so as to maximize the response 
+									of a specific filter, starting from a blank input image. The resulting input image 
+									will be one that the chosen filter is maximally responsive to.
+								</p>
+
+								<p> We apply this technique to GaMorNet and the different patters that the filters are 
+									most responsive to are shown at different depths within the network (the leftmost 
+									set of images is from the shallowest layer; and the rightmost set of images is from
+									the deepest layer). As is clear from these images -- shallower layers in the network
+									detect simple features in the input image such as edges and lines. As the network gets
+									progressively deeper, the network deals with higher level more complicated features. As
+									can be seen from the second-from-the-eight image, after detecting lines edges, GaMorNet
+									starts to focus on elliptical/circular patters -- galaxies! And in the last set of images,
+									it can be seen that GaMorNet is looking for sub-features within galaxies, such as spiral
+									arms! <em><b>The fact that it's only the deeper layers which learn the most complicated features,
+									is what allows us to achieve good performance by fine-tuning only the last few layers of 
+									our CNNs.
+									</b></em>
+								</p>
+
+
+
+
+							</section>
+
+					</div>
+
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Aritra Ghosh</li><li>Design: Based on Massively from <a href="https://html5up.net"
+						 target="_blank">HTML5 UP</a></li><li>Background Image: <a href="https://apod.nasa.gov/apod/ap180506.html" target="_blank">Dave Lane</a></li><li><a href="https://github.com/aritraghsh09/academic-website" 
+						 target="_blank">Website Source Code</a></li></ul>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

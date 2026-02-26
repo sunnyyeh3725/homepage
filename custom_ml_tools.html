@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Custom-Made ML Tools for Astronomy | Aritra Ghosh</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Custom-made machine learning tools will be essential 
+		in astronomy in order to deal with the large data volumes expected from future surveys." />
+        <meta name="keywords" content="machine learning astronomy, machine learning astrophysics,
+		machine learning tools astronomy, machine learning tools astrophysics, deep learning
+		astronomy, deep learning astrophysics" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-47Z4SFM7FZ"></script>
+		<script>
+ 		 window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-47Z4SFM7FZ');
+		</script>
+		
+        <!-- ACTIVATING MATHJAX TO WRITE LATEX   -->	
+		<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+       	</script>
+       	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+		
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Aritra | &#x0985;&#x09B0;&#x09BF;&#x09A4;&#x09CD;&#x09B0;&nbsp;</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about_me.html">About Me</a></li>
+							<li><a href="research.html">Research</a></li>
+							<li><a href="teaching.html">Teaching &amp Mentoring</a></li>
+							<li><a href="outreach.html">Outreach</a></li>
+							<li><a href="advocacy.html">Advocacy</a></li>	
+							<li><a href="cv.html">CV</a></li>			
+						</ul>
+						<ul class="icons">
+							<li><a href="mailto:aritraghsh09@gmail.com" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/aritraghsh09" target="_blank"  class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://twitter.com/aritraghsh09" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/aritra-ghosh-169ba582" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+
+								<header class="major">
+									<h2> Custom-Made ML Tools for Astronomy</h2>
+									<p> "When you have a hammer, everything looks like a nail"
+									</p>
+
+									<span class="image fit" style="max-width: 55%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/misc/ml_tools.png" alt="Illustration depicting different
+									machine learning tools used in astronomy"/>
+									<figattr>&copy; Aritra Ghosh | Individual components from deepai.org and clipart-library.com</figattr>
+									</span>
+							
+								</header>
+
+								<hr />
+
+								<h3>The need for custom-made ML Tools in Astronomy</h3>
+								<p>
+
+									<span class="image fit" style="max-width: 65%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/data_growth_astro.png" alt="Illustration depicting the exponential
+									growth of data in astronomy over the next decade"/>
+									<figattr>Note that the y-scale is logarithmic!</figattr>
+									</span>
+
+									Although the term "big-data" is probably overused these days, 
+									it might be important to think about <em><b>how "big" will big-data
+									be in astronomy over the next decade?</em></b> As the above figure shows, we will be 
+									producing $100\times$ more data every night. Thus, our algorithms will need to 
+									speed up by a similar amount. 						
+								</p>
+
+								<p>In the recent past, machine learning research has largely been driven by industrial/corporate 
+								   applications/needs. <em><b>It might be enticing to use these tools off-the-shelf as 
+								   black-boxes. However, this is extremely dangerous!</b></em> Unless we know (a) how accurate
+								   these methods are; (b) how uncertain they are; (c) what biases they have; <em>specifically
+								   in the context of astronomy</em>, we cannot draw robust scientific inferences using these tools.
+								   </p>
+
+								<p>Thus, <b><em>developing machine learning algorithms specifically for astronomy is not
+								   an option -- but a necessity!
+								</em></b>
+									Thus, as part of my Ph.D., one of my focuses has been developing new tools (outlined below), and robustly 
+									<a href="ml_tests.html">testing them out.</a>
+							
+								</p>
+
+								<hr />
+
+								<h2>GaMorNet <i class="fas fa-cog fa-spin fa-1x"></i></h2>
+
+								<p>
+
+								<span class="image fit" style="max-width: 80%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/gamornet_schematic.png" alt="Schematic Diagram of the 
+									Galaxy Morphology Network" style="height: 10%;"/></span>
+
+									GaMorNet (Galaxy morphological Network) is a classification network that predicts 
+									broad morphological classes for galaxies. GaMorNet doesn't need large amounts of real 
+									data for training, and has been demonstrated to work on galaxies across a range of redshifts
+									using both ground and space-based imaging!
+
+									<ul class="actions special">
+										<li><a href="gamornet.html" class="button primary">Learn More About GaMorNet</a></li>
+									</ul>
+
+								</p>
+
+								<hr />
+
+								<h2>GaMPEN <i class="fas fa-cog fa-spin fa-1x"></i></h2>
+
+								<p>
+									<span class="image fit" style="max-width: 90%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/gampen_intro.png" alt="Schematic Diagram showing
+									the basic inner working of GaMPEN. It takes an input image to first crop
+									it and then estimate posterior distributions of different morphological 
+									parameters"/></span>
+
+
+									GaMPEN (Galaxy Morphology Posterior Estimation) network is the first machine 
+									learning framework that can automatically crop galaxies to an optimal size and 
+									predict posterior distributions for different morphological parameter. 
+								</p>
+
+								<p>Thus, while GaMorNet can determine broad classifications, GaMPEN predicts exact values
+								   of parameters as well as associated uncertainties. GaMPEN has been extensively tested 
+								   and shown to yield accurate and well-calibrated posterior distributions with $\lesssim 5\%$
+								   deviation from theoretical expectations.
+								</p>
+
+								<ul class="actions special">
+									<li><a href="gampen.html" class="button primary">Learn More About GaMPEN</a></li>
+								</ul>	
+
+								<hr />
+
+								<h2>PSFGAN <i class="fas fa-cog fa-spin fa-1x"></i></h2>
+
+								<p>
+									<span class="image fit" style="max-width: 70%;
+									display: block;
+ 									margin-left: auto;
+  									margin-right: auto;">
+									<img src="images/research/psfgan.png" alt="Image showing
+									how PSFGAN can recover galaxies with point sources subtracted."/></span>
+
+									The above two ML frameworks (GaMorNet and GaMPEN) can robustly assess the 
+									morphology of inactive galaxies -- however, the alone determine the morphology 
+									of galaxies with active black holes. Studying the morphology of Active Galactic
+									Nuclei (AGN) hosts is more complicated due to the presence of a central 
+									point source, which is often quite bright compared to the host galaxy. Thus,
+									this central point source needs to be removed before the galaxy can be analyzed
+									by GaMorNet or GaMPEN.
+								</p>
+
+								<p>To remove the point source, we have extensively tested preprocessing AGN host 
+								   galaxies using PSFGAN, which is a Generative Adverserial Network (GAN). Given 
+								   an AGN host galaxy as an input image, PSFGAN returns the image of the host galaxy
+								   (without the point source).
+								</p>
+
+								<p>PSFGAN was originally developed by Stark et al.; but we have extensively adapted
+								   and extended PSFGAN. We have also verified that PSFGAN can be combined with the tools
+								   above to robustly determine the morphology of AGN host galaxies.
+								</p>
+
+								<ul class="actions special">
+									<li><a href="#" class="button primary">
+										PSFGAN Info. Coming Soon! <i class="fas fa-spinner fa-pulse fa-1.2x"></i></a></li>
+								</ul>	
+								
+							</section>
+
+					</div>
+
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Aritra Ghosh</li><li>Design: Based on Massively from <a href="https://html5up.net"
+						 target="_blank">HTML5 UP</a></li><li>Background Image: <a href="https://apod.nasa.gov/apod/ap180506.html" target="_blank">Dave Lane</a></li><li><a href="https://github.com/aritraghsh09/academic-website" 
+						 target="_blank">Website Source Code</a></li></ul>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
