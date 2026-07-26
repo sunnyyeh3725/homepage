@@ -73,9 +73,9 @@
 					<div id="main">
 								<ul class="actions special wrap">
 									<li><a href="#mesoscale" class="button more scrolly">Idealized Mesoscale Dissipation</a></li>
-									<li><a href="#satellite" class="button more scrolly">Satellite and global datasets</a></li>
-									<li><a href="#nearshore" class="button more scrolly">Nearshore Research</a></li>
-									<!-- <li><a href="#IGW" class="button more scrolly">Internal Gravity Waves</a></li>	-->
+									<li><a href="#energybudget" class="button more scrolly">Ocean Kinetic Energy Budget</a></li>
+									<li><a href="#machinelearning" class="button more scrolly">Machine Learning on Ocean Circulation</a></li>									
+									<li><a href="#nearshore" class="button more scrolly">Nearshore Hydronamic and Management</a></li>
 								</ul>
 
 
@@ -92,10 +92,10 @@
 											<source src="media/research/rwshelf.mp4" type="video/mp4">
 										</video>
 										<!-- TODO: Replace with your video description -->
-										<figattr>Idealized simulation of mesoscale energy propagation and dissipation at a western boundary.</figattr>											 
+										<figattr>Simulation of mesoscale energy propagation and dissipation at a western boundary.</figattr>											 
 									</div>
-										<p>In this <a href="https://journals.ametsoc.org/view/journals/phoc/aop/JPO-D-25-0059.1/JPO-D-25-0059.1.xml?tab_body=abstract-display" target="_blank">published work</a>, we investigate oceanic mesoscale energy dissipation at western boundaries.
-											I am interested in understanding how the mesoscale energy is dissipated given that mesoscale eddies are ubiquitous in the ocean and are nonlinear in mid and mid-high latitudes.
+										<p>In this <a href="https://journals.ametsoc.org/view/journals/phoc/aop/JPO-D-25-0059.1/JPO-D-25-0059.1.xml?tab_body=abstract-display" target="_blank">published work</a>, I investigate the dissipation of oceanic mesoscale energy at western boundaries.
+											I am interested in understanding how the westward-propagating mesoscale energy being dissipated in the global ocean given that eddies are ubiquitous but have nonlinearity of three-order-of magnitude in latitudes.
 											Keypoints:
 												<ul style="margin-top: -20px;">
 													<li>Bottom drag dominates viscous dissipation when eddies are nonlinear, and the open-ocean region dissipates most of the total kinetic energy.</li>
@@ -122,16 +122,16 @@
 								</section>								
 							</article>
 
-							<article class="post" id="satellite">
-								<h2>Satellite and Global Datasets</h2>
+							<article class="post" id="energybudget">
+								<h2>Ocean Kinetic Energy Budget</h2>
 								<!-- Teaser video-->
 								<section>
 									<style>
 									.video-container {
-										width: 70%; /* Resizes to 50% of parent container */
+										width: 85%; /* Resizes to 50% of parent container */
 										position: relative;
-										padding-bottom: 45%; /* 16:9 Aspect Ratio (9/16 = 0.5625) */
-										height: 70%;
+										padding-bottom: 47.8%; /* 16:9 Aspect Ratio (9/16 = 0.5625) */
+										height: 85%;
 										overflow: hidden;
 									}
 
@@ -153,17 +153,38 @@
 
 										<figattr>Daily bottom eddy kinetic energy from GLORYS12, a global ocean reanalysis dataset. </figattr>											 
 										
-										<p>In this work, I am interested in using satellite and Argo datasets to estimate how much global mesoscale energy is dissipated by bottom drag.
+										<p>This work aims to provide an accurate update of global bottom drag dissipation rate that is one of the pathways to dissipate oceanic mesoscale energy (<i>Ferrari and Wunsch, </i> <a href="https://www.annualreviews.org/content/journals/10.1146/annurev.fluid.40.111406.102139" target="_blank">2009</a>).
 											Keypoints:
 									
 											<ul style="margin-top: -20px;">
-												<li>The first time using satellite and Argo datasets to estimate near-seafloor EKE and drag dissipation rates.</li>
-												<li>Calculate EOF vertical structures from <a href="https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description" target="_blank">GLORYS12</a> dataset (<i>Jean-Michel et al., </i><a href="https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2021.698876/full" target="_blank">2021</a>) to reconstruct near-seafloor EKE.</li>
-												<li>Global bottom drag dissipation is $O.19\ \mathrm{TW}$, which is too small to dissipate the $1\ \mathrm{TW}$ of wind input to geostrophic flow. This work is under preparation for a GRL publication, and stay tuned for the preprint.</li>
+												<li>The first time using satellite and Argo datasets to estimate global near-seafloor EKE and drag dissipation rates.</li>
+												<li>Compute eddy vertical structures from <a href="https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description" target="_blank">GLORYS12</a> dataset (<i>Jean-Michel et al., </i><a href="https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2021.698876/full" target="_blank">2021</a>) using my thickness-weighted EOF tool available at <a href="https://github.com/sunnyyeh3725/EOF_vertical.git" target="_blank">EOF_vertical</a>.</li>
+												<li>Global bottom drag dissipation rate is $0.19\ \mathrm{TW}$, which is too small to dissipate the $1\ \mathrm{TW}$ of wind input to geostrophic flow. This work is under preparation for a GRL publication, and stay tuned for the preprint.</li>
 											</ul>
 										</p>	
 								</section>
-							</article>					
+							</article>		
+							
+							
+							<article class="post" id="machinelearning">
+								<h2>Machine Learning on Ocean Circulation</h2>
+								<!-- Teaser video-->
+								<section class="hero teaser">
+									<div class="container is-max-desktop">
+										<div class="hero-body">
+										<!-- TODO: Replace with your teaser video -->
+										<video poster="" id="tree" autoplay controls muted loop height="370vh" preload="metadata">
+											<!-- TODO: Add your video file path here -->
+											<source src="media/research/PBV.mp4" type="video/mp4">
+										</video>
+										<!-- TODO: Replace with your video description -->
+										<figattr>Predicted bottom flow speed from surface flow</figattr>											 
+									</div>
+										<p> My goal is to integrate machine learning and neural networks with high-speed computing to resolve and predict complex ocean physics that were previously intractable.
+											In this mentoring project, Gabrielle Barnes <i>(July 2026 - present)</i> and Aisha Mardini (<i>May 2025 - June 2026</i>) aim to use GLORYS12 dataset to train the models for global bottom flow prediction.
+										</p>												
+								</section>	
+							</article>								
 							
 							<article class="post" id="nearshore">
 								<h2>Nearshore Research</h2>
@@ -174,9 +195,9 @@
 									</span>			
 									
 									<p style="margin-top: -20px;">
-										I started up a team of nearshore sand coverage monitoring in Taoyuan, Taiwan.
-										I was the Unmanned Airborne Technique team leader and performed field work, data processing, and analysis.
+										I started up a team for monitoring tidal-zone sand coverage in Taoyuan coastlie, located in Taiwan.
 										I developed an effective operating system for this research team which has successfully continued this project, in part due to the training practices I helped develop. 
+										This investigation workflow enabled the local government and contractors managing a billion-dollar coastal project to monitor nearshore dynamics and assess construction-related environmental impacts.
 									</p>
 								
 									<span class="image fit" style="max-width: 68%;			
@@ -186,8 +207,8 @@
 									</span>			
 									
 									<p style="margin-top: -20px;">
-										I contributed to the UAV LiDAR system development (<i>Hunag et al.</i>, <a href="https://journals.ametsoc.org/view/journals/atot/35/8/jtech-d-17-0199.1.xml" target="_blank">2018</a>).
-										This autonomous system can measure waves, tides, wave energy dissipation (published in 2020 ICCE conference proceedings <a href="https://doi.org/10.9753/icce.v36v.waves.34" target="_blank">10.9753/icce.v36v.waves.34</a>, <a href="https://youtu.be/fBLbsBuK4AA" target="_blank">video</a>), and the roughness of the topography.
+										During my undergraduate and master research, I contributed to the UAV LiDAR system development (<i>Hunag et al.</i>, <a href="https://journals.ametsoc.org/view/journals/atot/35/8/jtech-d-17-0199.1.xml" target="_blank">2018</a>).
+										This autonomous system can measure waves, tides, wave energy dissipation (published in 2020 ICCE conference proceedings <a href="https://doi.org/10.9753/icce.v36v.waves.34" target="_blank">10.9753/icce.v36v.waves.34</a>, and presented in this <a href="https://youtu.be/fBLbsBuK4AA" target="_blank">video</a>), and the roughness of the land surface at centimenter scale.
 									</p>
 
 									<span class="image fit" style="max-width: 78%;			
@@ -197,10 +218,10 @@
 									</span>			
 									
 									<p style="margin-top: -20px;">
-										In addition to the nearshore physical dynamics research, I also participated in the archaeological landscape investigation in Xinwu, Taiwan, which uses airborne imaging techniques and hydrographic measurements to understand the fishing weir sites and their relationship with tidal dynamics.
+										In addition to the nearshore physical dynamics research, I participated in the archaeological landscape investigation in Xinwu, Taiwan, which uses airborne imaging techniques and hydrographic measurements to understand the fishing weir sites and their relationship with tidal dynamics.
+										As shown in the aerial image above, stone tidal weirs are built parallel to the shoreline and aligned perpendicular to local wave and tidal propagation to maximize fishing yields.
 									</p>
-
-									<!---->
+									
 
 							</article>					
 								
@@ -212,7 +233,7 @@
 					<div id="copyright">
 						<ul><li>&copy; Cheng Yang (Sunny) Yeh</li><li>Design based on <a href="https://ghosharitra.com"
 							 target="_blank">Aritra Ghosh</a> and <a href="https://html5up.net"
-							 target="_blank">HTML5 UP</a></li><li>Background: Guadalupe Mountains NP</li><li>Last update: 2026-06-18</li></ul>
+							 target="_blank">HTML5 UP</a></li><li>Background: Guadalupe Mountains NP</li><li>Last update: 2026-07-25</li></ul>
 					</div>
 
 			</div>
